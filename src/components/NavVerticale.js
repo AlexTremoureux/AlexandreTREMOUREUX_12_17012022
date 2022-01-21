@@ -1,15 +1,22 @@
 import React from "react";
+import imgMeditation from '../images/iconMeditation.svg'
+import imgNatation from '../images/iconNatation.svg'
+import imgVelo from '../images/iconVelo.svg'
+import imgMusculation from '../images/iconMusculation.svg'
+import '../styles/NavVerticale.css'
+import Copyright from "./Copyright";
 
 const NavVerticale = () => {
   return (
-    <div className="nav-verticale">
+    <section className="nav-verticale">
       <ul className="nav-verticale_ul">
-        <li>ImgRelax</li>
-        <li>ImgNatation</li>
-        <li>ImgVelo</li>
-        <li>ImgMusculation</li>
+        <li><img src={imgMeditation} alt=""/></li>
+        <li><img src={imgNatation} alt=""/></li>
+        <li><img src={imgVelo} alt=""/></li>
+        <li><img src={imgMusculation} alt=""/></li>
       </ul>
-    </div>
+      <Copyright />
+    </section>
   );
 };
 

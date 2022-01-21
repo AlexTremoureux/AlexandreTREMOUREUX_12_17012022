@@ -1,4 +1,5 @@
 import React from "react";
+import '../styles/NavHorizontale.css'
 
 const NavHorizontale = () => {
   return (
@@ -14,6 +15,3 @@ const NavHorizontale = () => {
 };
 
 export default NavHorizontale;
-<ul>
-  <li></li>
-</ul>;

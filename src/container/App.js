@@ -1,6 +1,9 @@
 import Logo from '../components/Logo';
+import Name from '../components/Name';
 import NavHorizontale from '../components/NavHorizontale';
-import './App.css';
+import NavVerticale from '../components/NavVerticale';
+import '../styles/header.css'
+
 
 function App() {
   return (
@@ -9,6 +12,21 @@ function App() {
         <Logo />
         <NavHorizontale />
       </header>
+      <NavVerticale />
+
+      <Name />
+      
+      {/*
+      <User-today-score />
+      <User-keydata />
+
+      <User-activity />
+
+      <User-average-sessions />
+
+      <User-performance />
+      */}
+      
       
       
     </div>
