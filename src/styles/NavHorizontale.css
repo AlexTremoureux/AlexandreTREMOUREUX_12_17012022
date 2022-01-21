@@ -1,3 +1,19 @@
+header {
+    display: flex;
+    height: 91px;
+    background-color: black;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 17%;
+}
+.logo > img {
+    width: 178px;
+}
+
 .nav-horizontale {
     width: 83%;
 }
@@ -12,8 +28,13 @@
     padding: 0px;
     margin: 0px;
 }
-
+.nav_link_horizontal {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
 .nav-horizontale_ul > li {
     font-size: 24px;
+    
 }
 

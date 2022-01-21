@@ -1,8 +1,8 @@
 import Logo from '../components/Logo';
-import Name from '../components/Name';
 import NavHorizontale from '../components/NavHorizontale';
 import NavVerticale from '../components/NavVerticale';
-import '../styles/header.css'
+import '../styles/App.css'
+import Router from '../utils/Router';
 
 
 function App() {
@@ -13,22 +13,7 @@ function App() {
         <NavHorizontale />
       </header>
       <NavVerticale />
-
-      <Name />
-      
-      {/*
-      <User-today-score />
-      <User-keydata />
-
-      <User-activity />
-
-      <User-average-sessions />
-
-      <User-performance />
-      */}
-      
-      
-      
+      <Router />
     </div>
   );
 }

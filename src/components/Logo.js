@@ -1,11 +1,12 @@
-import React from 'react';
-import logo from '../images/logo.svg'
+import React from "react";
+import { Link } from "react-router-dom";
+import logo from "../images/logo.svg";
 const Logo = () => {
-    return (
-        <div className='logo'>
-            <img src={logo} alt='' />
-        </div>
-    );
+  return (
+    <Link className="logo" to={`/`}>
+      <img src={logo} alt="" />
+    </Link>
+  );
 };
 
 export default Logo;

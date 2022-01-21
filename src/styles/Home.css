@@ -1,0 +1,37 @@
+.Home-main {
+  width: 60%;
+  margin: auto;
+  padding: 150px 50px;
+}
+.Home-main > h2 {
+  width: max-content;
+  margin: auto;
+}
+.userList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0px;
+  list-style: none;
+}
+.userList > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  height: 20px;
+  border: black solid 1px;
+  border-radius: 7px;
+  padding: 5px;
+  margin: 30px;
+  background: linear-gradient(rgba(255, 37, 37, 0.2), rgba(201, 39, 11, 0.884));
+  cursor: pointer;
+}
+.user_link {
+  text-decoration: none;
+  color: black;
+
+  height: auto;
+}
