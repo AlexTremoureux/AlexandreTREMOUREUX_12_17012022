@@ -5,5 +5,5 @@ const devUrl = data;
 // eslint-disable-next-line no-unused-vars
 const PROD = "production";
 const DEV = "development";
-const ENV = PROD;
+const ENV = DEV;
 export const url = ENV === DEV ? devUrl : prodUrl;

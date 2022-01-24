@@ -30,19 +30,20 @@ export function useFetch(src) {
   return { isLoading, data, error };
 }
 
-export function useFetchItemById(src, id) {
+export function useFetchUserById(src, id) {
   const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
   useEffect(() => {
+    console.log(src)
     if (!src) return;
     setLoading(true);
-    async function FetchItemById() {
+    async function FetchUserById() {
       try {
         const response = await fetch(src);
         const data = await response.json();
-        const itemToDisplay = data.find((location) => location.id === id);
+        const itemToDisplay = data.find((user) => user.id === id);
         const locationIsFind = itemToDisplay ? itemToDisplay.id === id : false;
         locationIsFind ? setData(itemToDisplay) : setError(true);
       } catch (err) {
@@ -53,7 +54,7 @@ export function useFetchItemById(src, id) {
       }
     }
 
-    FetchItemById();
+    FetchUserById();
   }, [src, id]);
   return { isLoading, data, error };
 }
