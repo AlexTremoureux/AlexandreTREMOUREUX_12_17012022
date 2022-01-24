@@ -6,22 +6,19 @@ import TodayScore from "../components/TodayScore";
 import UserActivity from "../components/UserActivity";
 import UserAverageSessions from "../components/UserAverageSessions";
 import UserPerformance from "../components/UserPerformance";
-import { USER_MAIN_DATA } from "../data/mocks";
-import { url } from "../utils/constantes";
-import { useFetchUserById } from "../utils/query";
-import Page404 from "./Page404";
+
 
 const User = () => {
   const id = useParams();
   return (
     <>
     <h1>Hello</h1>
-      <Name id={id} />
-      <UserActivity id={id} />
-      <UserAverageSessions id={id} />
-      <UserPerformance id={id} />
-      <TodayScore id={id} />
-      <KeyData id={id} />
+      <Name user={id} />
+      <UserActivity user={id} />
+      <UserAverageSessions user={id} />
+      <UserPerformance user={id} />
+      <TodayScore user={id} />
+      <KeyData user={id} />
     </>
   );
 };

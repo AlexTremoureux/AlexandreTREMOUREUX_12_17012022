@@ -1,10 +1,6 @@
 import { useState, useEffect } from "react";
 
-export const getData = async (source) => {
-  return await fetch(source).then((response) => response.json());
-};
-
-export function useFetch(src) {
+export function useFetch(src, id) {
   const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -16,7 +12,9 @@ export function useFetch(src) {
       try {
         const response = await fetch(src);
         const data = await response.json();
-        setData(data);
+        const userIsFind = data.data.id = id
+        userIsFind?
+        setData(data) : setError(true);
       } catch (err) {
         console.log(err);
         setError(true);
@@ -26,35 +24,6 @@ export function useFetch(src) {
     }
 
     fetchData();
-  }, [src]);
-  return { isLoading, data, error };
-}
-
-export function useFetchUserById(src, id) {
-  const [data, setData] = useState(null);
-  const [isLoading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
-
-  useEffect(() => {
-    console.log(src)
-    if (!src) return;
-    setLoading(true);
-    async function FetchUserById() {
-      try {
-        const response = await fetch(src);
-        const data = await response.json();
-        const itemToDisplay = data.find((user) => user.id === id);
-        const locationIsFind = itemToDisplay ? itemToDisplay.id === id : false;
-        locationIsFind ? setData(itemToDisplay) : setError(true);
-      } catch (err) {
-        console.log(err);
-        setError(true);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    FetchUserById();
   }, [src, id]);
   return { isLoading, data, error };
 }

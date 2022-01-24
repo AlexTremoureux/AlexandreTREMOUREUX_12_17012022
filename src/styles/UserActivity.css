@@ -1,0 +1,7 @@
+.section_activity {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 226px;
+    
+}
