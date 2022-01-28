@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { USER_MAIN_DATA } from "../data/mocks";
-import '../styles/Home.css'
+import "../styles/Home.css";
 
 const Home = () => {
   return (
