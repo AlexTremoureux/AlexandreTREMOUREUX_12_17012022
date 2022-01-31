@@ -4,3 +4,7 @@ body {
   padding: 0px;
   font-family: 'Roboto', sans-serif;
 }
+.mainContainer {
+  display: flex;
+  width: 100%;
+}

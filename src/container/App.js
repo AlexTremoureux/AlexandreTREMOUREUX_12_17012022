@@ -11,8 +11,10 @@ function App() {
         <Logo />
         <NavHorizontale />
       </header>
-      <NavVerticale />
-      <Router />
+      <div className="mainContainer">
+        <NavVerticale />
+        <Router />
+      </div>
     </div>
   );
 }

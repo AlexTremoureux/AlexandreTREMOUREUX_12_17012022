@@ -1,0 +1,56 @@
+.main {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.sectionUserInfos {
+  width: 100%;
+  height: 200px;
+  margin: 68px 0 0 117px;
+}
+
+.sectionCharts {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 31px 0 117px;
+}
+.sectionKeyData {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+}
+.keyData_card {
+  display: flex;
+  width: 258px;
+  height: 124px;
+  list-style: none;
+}
+
+.section_activity {
+  width: 100%;
+}
+.activity_Title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #20253a;
+}
+.section_averageSessions,
+.section_performance,
+.section_todayScore {
+  position: relative;
+  width: 258px;
+  height: 263px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+}
+.grey {
+  background-color: #282d30;
+}
+.red {
+  background-color: #ff0000;
+}
+.white {
+  background-color: #fbfbfb;
+}
