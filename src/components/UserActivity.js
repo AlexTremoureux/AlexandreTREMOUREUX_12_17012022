@@ -13,20 +13,13 @@ import {
 import "../styles/UserActivity.css";
 
 const UserActivity = ({ data }) => {
-  const renderCustomBarLabel = (item) => {
-    return item + 1;
-  };
-  function CustomTooltip({ payload, active }) {
-    if (active) {
-      return (
-        <div className="custom-tooltip">
-          <p> {`${payload[0].value} kg`}</p>
-          <p> {`${payload[1].value} kCal`}</p>
+  const renderCustomBarLabel = (num) => ++num;
+  const CustomTooltip = ({ payload: [kg, kCal], active }) =>
+    active && <div className="custom-tooltip">
+          <p> {`${kg.value} kg`}</p>
+          <p> {`${kCal.value} kCal`}</p>
         </div>
-      );
-    }
-    return null;
-  }
+  
   return (
     <section className="section_activity white">
       <h1 className="activity_Title">Activité quotidienne</h1>

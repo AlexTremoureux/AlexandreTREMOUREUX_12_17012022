@@ -15,30 +15,26 @@ export function useFetch(id) {
     setLoading(true);
 
     async function fetchData() {
-      try {
-        Promise.all(
-          URLS.map((url) => fetch(url).then((resp) => resp.json()))
-        ).then((userData) => {
-          const userInfos = userData[0].data;
-          const userActivity = userData[1].data;
-          const userAverageSessions = userData[2].data.sessions;
-          const userPerformance = userData[3].data;
-          const userIsFind = (userData[0].data.id = id);
-          userIsFind
-            ? setData({
-                Infos: userInfos,
-                Activity: userActivity,
-                AverageSessions: userAverageSessions,
-                Performance: userPerformance,
-              })
-            : setError(true);
+      Promise.all(
+        URLS.map((url) =>
+          fetch(url).then((resp) => {
+            if (resp.status !== 200) {
+              setError(true);
+              setLoading(false);
+            }
+            return resp.json();
+          })
+        )
+      ).then((userData) => {
+        const [Infos, Activity, AverageSessions, Performance] = userData
+        setData({
+          Infos: Infos.data,
+          Activity: Activity.data,
+          AverageSessions: AverageSessions.data.sessions,
+          Performance: Performance.data,
         });
-      } catch (err) {
-        console.log(err);
-        setError(true);
-      } finally {
         setLoading(false);
-      }
+      });
     }
 
     fetchData();
