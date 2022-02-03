@@ -8,15 +8,15 @@ const displayNavLink = [
     dest: "Accueil",
   },
   {
-    route: "/profil",
+    route: `/profil`,
     dest: "Profil",
   },
   {
-    route: "/reglages",
+    route: `/reglages`,
     dest: "Réglage",
   },
   {
-    route: "/communaute",
+    route: `/communaute`,
     dest: "Communauté",
   },
 ];

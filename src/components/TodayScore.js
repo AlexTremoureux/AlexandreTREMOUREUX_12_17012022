@@ -4,21 +4,40 @@ import {
   RadialBar,
   RadialBarChart,
   ResponsiveContainer,
+  Text,
 } from "recharts";
 import "../styles/TodayScore.css";
+
+const renderCustomizedLabel = (props) => {
+  const value = props.value;
+  const text1 = "de votre";
+  const text2 = "objectif";
+  return (
+    <>
+      <text x={"41.5%"} y={"49%"} fill="#282D30" fontSize="26px" fontWeight={700}>
+        {value + "%"}
+      </text>
+      <text x={"39%"} y={"59%"} fill="#282D30" fontSize="16px" fontWeight={500}>
+        {text1}
+      </text>
+      <text x={"39.5%"} y={"68%"} fill="#282D30" fontSize="16px" fontWeight={500}>
+        {text2}
+      </text>
+    </>
+  );
+};
 
 const TodayScore = ({ ...data }) => {
   return (
     <section className="section_todayScore white">
       <h4 className="section_todayScore_Title">Score</h4>
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer className={"overWhite"} width="100%" height="100%" >
         <RadialBarChart
           cx="50%"
           cy="50%"
           innerRadius="100%"
-          outerRadius="50%"
-          startAngle={100}
-          barSize={10}
+          outerRadius="70%"
+          startAngle= "90"
           data={[data]}
         >
           <PolarAngleAxis
@@ -29,10 +48,11 @@ const TodayScore = ({ ...data }) => {
           />
           <RadialBar
             minAngle={15}
-            label={{ position: "center", fill: "#282D30" }}
+            label={renderCustomizedLabel}
             barSize={10}
             dataKey="data"
-            fill="red"
+            fill="#FF0000"
+            cornerRadius={50}
           />
         </RadialBarChart>
       </ResponsiveContainer>

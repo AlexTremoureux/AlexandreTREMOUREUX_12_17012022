@@ -2,14 +2,11 @@ import React from "react";
 import "../styles/KeyData.css";
 
 const KeyData = ({ icon, color, count, unit, name }) => (
-  <li className="li-keyData">
+  <li className="li-keyData white">
     <div
       className="keyData_card"
       style={{
         backgroundImage: `url(${icon})`,
-        backgroundPosition: "center",
-        backgroundSize: "20px",
-        backgroundRepeat: "no-repeat",
         backgroundColor: `${color}`,
       }}
     ></div>

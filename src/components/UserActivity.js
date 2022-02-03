@@ -13,6 +13,7 @@ import {
 import "../styles/UserActivity.css";
 
 const UserActivity = ({ data }) => {
+  console.log(data)
   const renderCustomBarLabel = (num) => ++num;
   const CustomTooltip = ({ payload: [kg, kCal], active }) =>
     active && <div className="custom-tooltip">
@@ -37,31 +38,35 @@ const UserActivity = ({ data }) => {
           <XAxis
             dataKey={data.sessions.index}
             tickLine={false}
-            axisLine={false}
+            axisLine={true}
+            stroke="#DEDEDE"
+            tick={{ fill: '#9B9EAC' }}
             tickFormatter={renderCustomBarLabel}
+            padding={{ left: -40, right: -40 }}
             dy={16}
           />
           <YAxis
             orientation="right"
             tickLine={false}
             axisLine={false}
+            tick={{ fill: '#9B9EAC' }}
             dx={25}
           />
           <Tooltip
             content={<CustomTooltip />}
-            position={{ y: -20 }}
+            position={{ y: -15 }}
             wrapperStyle={{
               backgroundColor: "#E60000",
               color: "#FFFFFF",
-              width: "90px",
-              height: "120px",
+              width: "72px",
+              height: "90px",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              marginLeft: "80px",
             }}
             cursor={{
-              fill: "#C4C4C4",
-              fillOpacity: ".5",
+              fill: "rgba(196, 196, 196, 0.5)",
             }}
           />
           <Legend

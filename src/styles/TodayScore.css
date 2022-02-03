@@ -1,3 +1,9 @@
 .section_todayScore_Title {
-    margin: 20px 0px -40px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 20px 0px -40px 35px;
+    color: #20253A;
+}
+.overWhite {
+   background-color: whitesmoke;
 }

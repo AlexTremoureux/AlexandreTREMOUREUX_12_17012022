@@ -1,17 +1,21 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import KeyData from "../components/KeyData";
+import { useFetch } from "../utils/query";
+import Page404 from "./Page404";
+import Loader from "./Loader";
+
 import Name from "../components/Name";
 import TodayScore from "../components/TodayScore";
 import UserActivity from "../components/UserActivity";
 import UserAverageSessions from "../components/UserAverageSessions";
 import UserPerformance from "../components/UserPerformance";
-import { useFetch } from "../utils/query";
-import Page404 from "./Page404";
+import KeyData from "../components/KeyData";
+
 import iconCalories from "../images/iconCalories.svg";
 import iconGlucides from "../images/iconGlucides.svg";
 import iconLipides from "../images/iconLipides.svg";
 import iconProtein from "../images/iconProtein.svg";
+
 import "../styles/User.css";
 
 const displayKeyData = [
@@ -50,7 +54,7 @@ const User = () => {
   const { data, error, isLoading } = useFetch(id);
 
   if (error) return <Page404 />;
-  if (isLoading) return <div>Chargement en cours</div>;
+  if (isLoading) return <Loader />;
 
   return (
     <main className="main">

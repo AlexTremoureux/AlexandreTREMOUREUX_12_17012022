@@ -24,9 +24,9 @@ const UserPerformance = ({ data }) => (
       <RadarChart
         cx="50%"
         cy="50%"
-        outerRadius="71%"
-        innerRadius="5%"
-        data={data.data}
+        outerRadius="70%"
+        innerRadius="10%"
+        data={data.data.reverse()}
       >
         <PolarGrid radialLines={false} />
         <PolarAngleAxis
@@ -36,7 +36,7 @@ const UserPerformance = ({ data }) => (
           dx={-2}
           dy={2}
           tickLine={false}
-          tick={{ fontSize: 10, fontWeight: 500 }}
+          tick={{ fontSize: 12, fontWeight: 500 }}
         />
         <Radar
           name="Mike"

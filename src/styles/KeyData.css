@@ -1,54 +1,49 @@
 .sectionKeyData {
-    position: fixed;
-    right: 2%;
-    top: 240px;
-    display: flex;
-    flex-direction: column;
-    
-  }
+  position: fixed;
+  right: 4%;
+  top: 240px;
+  display: flex;
+  flex-direction: column;
+}
 
 .keyDataList {
-    width: 218px;
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+}
 
 .li-keyData {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 258px;
-    height: 124px;
-    padding: 20px;
-    
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 258px;
+  height: 124px;
+  margin: 20px;
 }
 .keyData_card {
-    display: flex;
-  width: 160px;
-  height: 124px;
+  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  border-radius: 6px;
   list-style: none;
-    max-width: 60px;
-    max-height: 60px;
-    
-    border-radius: 6px;
-    
+  width: 60px;
+  height: 60px;
+  margin: 32px 24px 32px 32px;
 }
 .keyData_card_infos {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    margin-left: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 24px;
 }
 .keyData_card_infos_count {
-font-weight: 700;
-font-size: 20px;
-color: #282D30;
-line-height: 24px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #282d30;
+  line-height: 24px;
 }
 .keyData_card_infos_title {
-    font-weight: 500;
-    font-size: 14px;
-    color: #74798C;
-
+  font-weight: 500;
+  font-size: 14px;
+  color: #74798c;
 }

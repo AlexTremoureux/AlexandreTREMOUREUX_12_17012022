@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import CallToAction from "../components/CallToAction";
 import { USER_MAIN_DATA } from "../data/mocks";
 import "../styles/Home.css";
 
@@ -9,11 +9,7 @@ const Home = () => (
     <ul className="userList">
       {USER_MAIN_DATA.map((user) => (
         <li key={user.id}>
-          <Link className="user_link" to={`/user/${user.id}`}>
-            <p>
-              {user.userInfos.firstName} {user.userInfos.lastName}
-            </p>
-          </Link>
+          <CallToAction dest={`/user/${user.id}`} text={user.userInfos.firstName  + " " + user.userInfos.lastName} />
         </li>
       ))}
     </ul>

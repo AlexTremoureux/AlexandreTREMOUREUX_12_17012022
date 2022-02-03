@@ -1,1 +1,10 @@
-
+.section_activity {
+    width: 90%;
+    padding: 0px 15px 15px 15px;
+  }
+  .activity_Title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #20253a;
+    padding-left: 30px;
+  }

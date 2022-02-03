@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 
 export function useFetch(id) {
+  
   const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  
 
   useEffect(() => {
     const API_URL = "http://localhost:3000/user/" + id;
@@ -26,14 +28,15 @@ export function useFetch(id) {
           })
         )
       ).then((userData) => {
-        const [Infos, Activity, AverageSessions, Performance] = userData
+        const [Infos, Activity, AverageSessions, Performance] = userData;
         setData({
           Infos: Infos.data,
           Activity: Activity.data,
           AverageSessions: AverageSessions.data.sessions,
           Performance: Performance.data,
         });
-        setLoading(false);
+        localStorage.setItem("id", id);
+        setTimeout(() => setLoading(false), 1000);
       });
     }
 
