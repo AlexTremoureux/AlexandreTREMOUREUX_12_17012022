@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { url } from "./constantes";
 
 export function useFetch(id) {
   
@@ -8,7 +9,7 @@ export function useFetch(id) {
   
 
   useEffect(() => {
-    const API_URL = "http://localhost:3000/user/" + id;
+    const API_URL = url + id;
     const activity = API_URL + "/activity";
     const averageSessions = API_URL + "/average-sessions";
     const performance = API_URL + "/performance";

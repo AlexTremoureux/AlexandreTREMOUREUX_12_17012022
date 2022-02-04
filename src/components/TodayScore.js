@@ -4,7 +4,6 @@ import {
   RadialBar,
   RadialBarChart,
   ResponsiveContainer,
-  Text,
 } from "recharts";
 import "../styles/TodayScore.css";
 
