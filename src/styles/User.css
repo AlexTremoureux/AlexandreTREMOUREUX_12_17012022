@@ -5,11 +5,11 @@
 }
 
 .sectionCharts {
-  width: 60%;
+  width: 55%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 300px 0px 0px 13%;
+  margin: 50px 0px 0px 13%;
 }
 
 .section_averageSessions,
@@ -33,3 +33,17 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
   border-radius: 5px;
 }
+
+@media screen and (min-width: 1440px) {
+  .sectionCharts {
+    width: 60%;
+    max-width: 1400px;
+    justify-content: space-evenly;
+  }
+  .section_averageSessions,
+  .section_performance,
+  .section_todayScore {
+    margin: 0px 0px 20px;
+  }
+}
+

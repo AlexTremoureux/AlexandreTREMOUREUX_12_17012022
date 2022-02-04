@@ -1,10 +1,17 @@
 .section_activity {
-    width: 90%;
+    width:100%;
     padding: 0px 15px 15px 15px;
   }
   .activity_Title {
     font-size: 15px;
     font-weight: 500;
     color: #20253a;
-    padding-left: 30px;
+    padding-left: 5%;
+    padding-bottom: 8%;
+  }
+
+  @media screen and (min-width: 1150px) {
+    .activity_Title {
+      padding-bottom: 7px;
+    }
   }

@@ -42,7 +42,7 @@ const UserActivity = ({ data }) => {
             stroke="#DEDEDE"
             tick={{ fill: '#9B9EAC' }}
             tickFormatter={renderCustomBarLabel}
-            padding={{ left: -40, right: -40 }}
+            padding={{ left: 0, right: 0 }}
             dy={16}
           />
           <YAxis
