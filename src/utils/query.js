@@ -14,7 +14,9 @@ export function useFetch(id) {
     const averageSessions = API_URL + "/average-sessions";
     const performance = API_URL + "/performance";
     const URLS = [API_URL, activity, averageSessions, performance];
+
     if (!id) return;
+    
     setLoading(true);
 
     async function fetchData() {

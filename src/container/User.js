@@ -58,9 +58,11 @@ const User = () => {
 
   return (
     <main className="main">
+
       <section className="sectionUserInfos">
         <Name data={data.Infos} />
       </section>
+
       <section className="sectionCharts">
         <UserActivity data={data.Activity} />
         <UserAverageSessions data={data.AverageSessions} />
@@ -73,8 +75,10 @@ const User = () => {
           }
         />
       </section>
+
       <section className="sectionKeyData">
         <ul className="keyDataList">
+
           {displayKeyData.map((keyData) => (
             <KeyData
               icon={keyData.icon}
@@ -85,8 +89,10 @@ const User = () => {
               key={keyData.key}
             />
           ))}
+          
         </ul>
       </section>
+
     </main>
   );
 };

@@ -20,12 +20,14 @@ const formatDay = {
   7: "D",
 };
 const dayFormater = (day) => formatDay[day];
+
 const CustomStyleToolTip = ({ payload, active }) =>
   active && (
     <div>
       <p>{payload[0].value} min</p>
     </div>
   );
+
 const CustomCursor = (props) => {
   const { points, width, height } = props;
   const { x, y } = points[0];
@@ -88,49 +90,3 @@ const UserAverageSessions = ({ data }) => (
 );
 
 export default UserAverageSessions;
-
-/*
-<LineChart
-        data={data}
-        padding={{
-          top: 0,
-          right: 20,
-          left: 20,
-          bottom: 5,
-        }}
-      >
-        <XAxis
-          dataKey="day"
-          tickFormatter={dayFormater}
-          fontSize="12px"
-          stroke="rgba(255, 255, 255, 0.7)"
-          tickLine={false}
-          axisLine={false}
-        />
-        <YAxis hide={true} domain={["dataMin-30", "dataMax+30"]} />
-        <Tooltip
-          cursor={<CustomCursor />}
-          content={<CustomStyleToolTip />}
-          wrapperStyle={{
-            fontSize: "12px",
-            textAlign: "center",
-            backgroundColor: "#FFFFFF",
-            padding: "0px 10px 0px 10px",
-          }}
-        />
-        <Area
-          type="monotone"
-          dataKey="sessionLength"
-          fill="background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.106534) 100%)"
-          stroke="#8884d8"
-        />
-        <Line
-          type="monotone"
-          dataKey="sessionLength"
-          stroke="rgba(255, 255, 255, 0.7)"
-          strokeWidth="2px"
-          activeDot={{ r: 5 }}
-          dot={{ r: 0 }}
-        />
-      </LineChart>
-      */

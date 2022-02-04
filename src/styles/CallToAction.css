@@ -1,44 +1,42 @@
 .CTALink {
-    position: relative;
-    padding: 20px;
-    border-radius: 15px;
-    color: white;
-    text-decoration: none;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    background-image: linear-gradient(
-      to bottom,
-      hsl(344, 100%, 50%),
-      hsl(31, 100%, 40%)
-    );
-    z-index: 1;
-    
-box-shadow: -5px -3px 15px 0px  rgb(48, 31, 31) 
-  }
-  
-  .CTALink::before {
-    position: absolute;
-    border-radius: 15px;
-    content: "";
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(
-      to right,
-      hsl(211, 100%, 50%),
-      hsl(179, 100%, 30%)
-    );
-  
-    z-index: -1;
-    transition: opacity 0.5s linear;
-    opacity: 0;
-  }
-  .CTALink:hover::before {
-    opacity: 1;
-  }
+  position: relative;
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  text-decoration: none;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  background-image: linear-gradient(
+    to bottom,
+    hsl(344, 100%, 50%),
+    hsl(31, 100%, 40%)
+  );
+  z-index: 1;
+  box-shadow: -5px -3px 15px 0px rgb(48, 31, 31);
+}
 
-  .CTALink:hover {
-    box-shadow: 5px 3px 15px 0px  rgb(48, 31, 31)
-  }
+.CTALink::before {
+  position: absolute;
+  border-radius: 15px;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to right,
+    hsl(211, 100%, 50%),
+    hsl(179, 100%, 30%)
+  );
+  z-index: -1;
+  transition: opacity 0.5s linear;
+  opacity: 0;
+}
+.CTALink:hover::before {
+  opacity: 1;
+}
+
+.CTALink:hover {
+  box-shadow: 5px 3px 15px 0px rgb(48, 31, 31);
+}

@@ -5,4 +5,5 @@ const Copyright = () => (
     <p className="copyright_text">Copyright, SportSee 2020</p>
   </div>
 );
+
 export default Copyright;

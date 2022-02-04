@@ -1,11 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import imgMeditation from "../images/iconMeditation.svg";
 import imgNatation from "../images/iconNatation.svg";
 import imgVelo from "../images/iconVelo.svg";
 import imgMusculation from "../images/iconMusculation.svg";
-import "../styles/NavVerticale.css";
 import Copyright from "./Copyright";
-import { Link } from "react-router-dom";
+
+import "../styles/NavVerticale.css";
 
 const displayNavIcon = [
   {
@@ -34,6 +36,7 @@ const displayNavIcon = [
 const NavVerticale = () => (
   <aside className="nav-verticale">
     <ul className="nav-verticale_ul">
+
       {displayNavIcon.map(navIcon => (
         <li>
         <Link to={navIcon.dest}>
@@ -41,6 +44,7 @@ const NavVerticale = () => (
         </Link>
       </li>
       ))}
+
     </ul>
     <Copyright />
   </aside>

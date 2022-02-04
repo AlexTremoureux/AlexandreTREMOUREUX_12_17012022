@@ -13,8 +13,9 @@ import {
 import "../styles/UserActivity.css";
 
 const UserActivity = ({ data }) => {
-  console.log(data)
+
   const renderCustomBarLabel = (num) => ++num;
+  
   const CustomTooltip = ({ payload: [kg, kCal], active }) =>
     active && <div className="custom-tooltip">
           <p> {`${kg.value} kg`}</p>

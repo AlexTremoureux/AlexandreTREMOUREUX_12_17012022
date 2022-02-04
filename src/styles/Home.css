@@ -4,20 +4,22 @@
   margin: auto;
   padding: 150px 50px;
   background-image: linear-gradient(
-  300deg,
-  hsl(0deg 22% 13%) 0%,
-  hsl(272deg 26% 7%) 50%,
-  hsl(315deg 100% 0%) 100%
-);
+    300deg,
+    hsl(0deg 22% 13%) 0%,
+    hsl(272deg 26% 7%) 50%,
+    hsl(315deg 100% 0%) 100%
+  );
 }
+
 .Home-main > h2 {
   width: 700px;
   text-align: center;
-  margin: 150px auto ;
+  margin: 150px auto;
   font-size: 36px;
   font-weight: 500;
   color: white;
 }
+
 .userList {
   display: flex;
   flex-direction: column;
@@ -27,16 +29,13 @@
   padding: 0px;
   list-style: none;
 }
+
 .userList > li {
   display: flex;
   justify-content: center;
   align-items: center;
   width: max-content;
   height: 20px;
-  
-  
   padding: 20px;
   margin: 30px;
-  
 }
-

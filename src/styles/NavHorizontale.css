@@ -4,6 +4,7 @@
   text-align: center;
   margin-left: 25px;
 }
+
 .logo > img {
   width: 178px;
 }
@@ -11,6 +12,7 @@
 .nav-horizontale {
   width: 83%;
 }
+
 .nav-horizontale_ul {
   display: flex;
   width: 100%;
@@ -22,11 +24,13 @@
   padding: 0px;
   margin: 0px;
 }
+
 .nav_link_horizontal {
   text-decoration: none;
   color: white;
   cursor: pointer;
 }
+
 .nav_link_horizontal_li {
   font-size: 24px;
   font-weight: 500;
