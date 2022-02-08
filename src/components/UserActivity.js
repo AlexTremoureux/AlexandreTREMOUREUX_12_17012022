@@ -14,8 +14,10 @@ import "../styles/UserActivity.css";
 
 const UserActivity = ({ data }) => {
 
-  const renderCustomBarLabel = (num) => ++num;
+  // Incrementation to start at 1
+  const RenderCustomBarLabel = (num) => ++num;
   
+  // Custom ToolTip to display kg & kCal
   const CustomTooltip = ({ payload: [kg, kCal], active }) =>
     active && <div className="custom-tooltip">
           <p> {`${kg.value} kg`}</p>
@@ -42,7 +44,7 @@ const UserActivity = ({ data }) => {
             axisLine={true}
             stroke="#DEDEDE"
             tick={{ fill: '#9B9EAC' }}
-            tickFormatter={renderCustomBarLabel}
+            tickFormatter={RenderCustomBarLabel}
             padding={{ left: 0, right: 0 }}
             dy={16}
           />

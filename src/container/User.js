@@ -18,6 +18,8 @@ import iconProtein from "../images/iconProtein.svg";
 
 import "../styles/User.css";
 
+// Component container that dispatch data to subcomponents
+
 const displayKeyData = [
   {
     icon: iconCalories,

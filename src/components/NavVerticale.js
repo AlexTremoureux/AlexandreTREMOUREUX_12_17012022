@@ -9,6 +9,7 @@ import Copyright from "./Copyright";
 
 import "../styles/NavVerticale.css";
 
+// Array of Future link of navigation
 const displayNavIcon = [
   {
     icon: imgMeditation,
@@ -38,7 +39,7 @@ const NavVerticale = () => (
     <ul className="nav-verticale_ul">
 
       {displayNavIcon.map(navIcon => (
-        <li>
+        <li key={navIcon.alt}>
         <Link to={navIcon.dest}>
         <img src={navIcon.icon} alt={navIcon.alt} />
         </Link>

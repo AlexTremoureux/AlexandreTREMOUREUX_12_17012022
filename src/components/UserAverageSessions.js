@@ -10,6 +10,7 @@ import {
 } from "recharts";
 import "../styles/UserAverageSessions.css";
 
+
 const formatDay = {
   1: "L",
   2: "M",
@@ -19,6 +20,7 @@ const formatDay = {
   6: "S",
   7: "D",
 };
+// convert day(number) to string
 const dayFormater = (day) => formatDay[day];
 
 const CustomStyleToolTip = ({ payload, active }) =>
@@ -28,8 +30,7 @@ const CustomStyleToolTip = ({ payload, active }) =>
     </div>
   );
 
-const CustomCursor = (props) => {
-  const { points, width, height } = props;
+const CustomCursor = ({ points, width, height }) => {
   const { x, y } = points[0];
   return (
     <Rectangle

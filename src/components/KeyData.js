@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/KeyData.css";
 
+// card component that indicates key data
 const KeyData = ({ icon, color, count, unit, name }) => (
   <li className="li-keyData white">
     <div

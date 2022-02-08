@@ -7,7 +7,8 @@ import {
 } from "recharts";
 import "../styles/TodayScore.css";
 
-const renderCustomizedLabel = (props) => {
+// Custom central label for RadialBarChart
+const RenderCustomizedLabel = (props) => {
   const value = props.value;
   const text1 = "de votre";
   const text2 = "objectif";
@@ -26,7 +27,8 @@ const renderCustomizedLabel = (props) => {
   );
 };
 
-const TodayScore = ({ ...data }) => {
+
+const TodayScore = (data) => {
   return (
     <section className="section_todayScore white">
       <h4 className="section_todayScore_Title">Score</h4>
@@ -47,7 +49,7 @@ const TodayScore = ({ ...data }) => {
           />
           <RadialBar
             minAngle={15}
-            label={renderCustomizedLabel}
+            label={RenderCustomizedLabel}
             barSize={10}
             dataKey="data"
             fill="#FF0000"

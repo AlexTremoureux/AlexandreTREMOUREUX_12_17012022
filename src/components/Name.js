@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Name.css";
 
+// Component Name for User.js
 const Name = ({ data }) => (
   <>
     <h2 className="name_Title">

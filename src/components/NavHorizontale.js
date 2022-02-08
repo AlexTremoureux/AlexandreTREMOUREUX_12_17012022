@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/NavHorizontale.css";
 
+// Array of Link for navigation Global
 const displayNavLink = [
   {
     route: "/",
@@ -21,6 +22,7 @@ const displayNavLink = [
   },
 ];
 
+// Navigation Global
 const NavHorizontale = () => (
   <nav className="nav-horizontale">
     <ul className="nav-horizontale_ul">

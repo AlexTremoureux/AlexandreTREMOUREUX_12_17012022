@@ -16,6 +16,7 @@ const formatKind = {
   5: "Vitesse",
   6: "Intensité",
 };
+// Translate english to french
 const translateKind = (kind) => formatKind[kind];
 
 const UserPerformance = ({ data }) => (
