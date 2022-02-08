@@ -1,3 +1,4 @@
+import propTypes from "prop-types";
 import React from "react";
 import {
   PolarAngleAxis,
@@ -61,4 +62,7 @@ const TodayScore = (data) => {
   );
 };
 
+TodayScore.propTypes = {
+  data: propTypes.number.isRequired,
+}
 export default TodayScore;

@@ -1,3 +1,4 @@
+import propTypes from "prop-types";
 import React from "react";
 import "../styles/Name.css";
 
@@ -13,4 +14,7 @@ const Name = ({ data }) => (
   </>
 );
 
+Name.propTypes = {
+  data: propTypes.object.isRequired,
+}
 export default Name;

@@ -1,3 +1,4 @@
+import propTypes from "prop-types";
 import React from "react";
 import {
   BarChart,
@@ -100,4 +101,7 @@ const UserActivity = ({ data }) => {
   );
 };
 
+UserActivity.propTypes = {
+  data: propTypes.object.isRequired,
+}
 export default UserActivity;

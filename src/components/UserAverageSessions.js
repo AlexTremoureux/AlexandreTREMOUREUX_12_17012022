@@ -1,3 +1,4 @@
+import propTypes from "prop-types";
 import React from "react";
 import {
   Area,
@@ -90,4 +91,7 @@ const UserAverageSessions = ({ data }) => (
   </section>
 );
 
+UserAverageSessions.propTypes = {
+  data: propTypes.array.isRequired,
+}
 export default UserAverageSessions;

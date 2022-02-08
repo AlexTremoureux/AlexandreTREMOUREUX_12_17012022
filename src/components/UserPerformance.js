@@ -1,3 +1,4 @@
+import propTypes from "prop-types";
 import React from "react";
 import {
   PolarAngleAxis,
@@ -51,4 +52,7 @@ const UserPerformance = ({ data }) => (
   </section>
 );
 
+UserPerformance.propTypes = {
+  data: propTypes.object.isRequired,
+}
 export default UserPerformance;

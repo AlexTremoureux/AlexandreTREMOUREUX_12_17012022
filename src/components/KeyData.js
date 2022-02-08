@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import "../styles/KeyData.css";
 
 // card component that indicates key data
@@ -20,5 +21,13 @@ const KeyData = ({ icon, color, count, unit, name }) => (
     </div>
   </li>
 );
+  
+KeyData.propTypes = {
+  icon: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+  count: PropTypes.number.isRequired,
+  unit: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+}
 
 export default KeyData;
