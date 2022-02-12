@@ -45,7 +45,7 @@ export function useFetch(id) {
           AverageSessions: AverageSessions.data.sessions,
           Performance: Performance.data,
         });
-        localStorage.setItem("id", id);
+        
         // Loading spinner 
         setTimeout(() => setLoading(false), 1000);
       });

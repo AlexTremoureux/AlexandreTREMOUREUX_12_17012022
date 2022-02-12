@@ -33,7 +33,7 @@ const USER_MAIN_DATA = [
 
 const USER_ACTIVITY = [
     {
-        userId: 12,
+        id: 12,
         sessions: [
             {
                 day: '2020-07-01',
@@ -73,7 +73,7 @@ const USER_ACTIVITY = [
         ]
     },
     {
-        userId: 18,
+        id: 18,
         sessions: [
             {
                 day: '2020-07-01',
@@ -117,7 +117,7 @@ const USER_ACTIVITY = [
 
 const USER_AVERAGE_SESSIONS = [
     {
-        userId: 12,
+        id: 12,
         sessions: [
             {
                 day: 1,
@@ -150,7 +150,7 @@ const USER_AVERAGE_SESSIONS = [
         ]
     },
     {
-        userId: 18,
+        id: 18,
         sessions: [
             {
                 day: 1,
@@ -187,7 +187,7 @@ const USER_AVERAGE_SESSIONS = [
 
 const USER_PERFORMANCE = [
     {
-        userId: 12,
+        id: 12,
         kind: {
             1: 'cardio',
             2: 'energy',
@@ -224,7 +224,7 @@ const USER_PERFORMANCE = [
         ]
     },
     {
-        userId: 18,
+        id: 18,
         kind: {
             1: 'cardio',
             2: 'energy',

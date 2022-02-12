@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { useFetch } from "../utils/query";
+//import { useFetch } from "../utils/query";
 import Page404 from "./Page404";
 import Loader from "./Loader";
 
@@ -17,6 +17,7 @@ import iconLipides from "../images/iconLipides.svg";
 import iconProtein from "../images/iconProtein.svg";
 
 import "../styles/User.css";
+import { useFetchDataMocks } from "../utils/queryMocks";
 
 // Component container that dispatch data to subcomponents
 
@@ -53,11 +54,12 @@ const displayKeyData = [
 
 const User = () => {
   const { id } = useParams();
-  const { data, error, isLoading } = useFetch(id);
+  // If we wants data from API, use function: useFetch(id)
+  const { data, error, isLoading } = useFetchDataMocks(id);
 
   if (error) return <Page404 />;
   if (isLoading) return <Loader />;
-
+  
   return (
     <main className="main">
 
