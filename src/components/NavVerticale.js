@@ -1,38 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-import imgMeditation from "../images/iconMeditation.svg";
-import imgNatation from "../images/iconNatation.svg";
-import imgVelo from "../images/iconVelo.svg";
-import imgMusculation from "../images/iconMusculation.svg";
 import Copyright from "./Copyright";
 
+
 import "../styles/NavVerticale.css";
+import { displayNavIcon } from "../utils/constantes";
 
-// Array of Future link of navigation
-const displayNavIcon = [
-  {
-    icon: imgMeditation,
-    alt: "Meditation",
-    dest: "/prochainement"
-  },
-  {
-    icon: imgNatation,
-    alt: "Natation",
-    dest: "/prochainement"
-  },
-  {
-    icon: imgVelo,
-    alt: "Velo",
-    dest: "/prochainement"
-  },
-  {
-    icon: imgMusculation,
-    alt: "Musculation",
-    dest: "/prochainement"
-  },
 
-]
 
 const NavVerticale = () => (
   <aside className="nav-verticale">

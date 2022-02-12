@@ -1,26 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { displayNavLink } from "../utils/constantes";
 import "../styles/NavHorizontale.css";
 
-// Array of Link for navigation Global
-const displayNavLink = [
-  {
-    route: "/",
-    dest: "Accueil",
-  },
-  {
-    route: `/profil`,
-    dest: "Profil",
-  },
-  {
-    route: `/reglages`,
-    dest: "Réglage",
-  },
-  {
-    route: `/communaute`,
-    dest: "Communauté",
-  },
-];
 
 // Navigation Global
 const NavHorizontale = () => (
